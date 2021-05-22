@@ -31,7 +31,7 @@ while ban:
     trabajador={
         "nombre":nombre,
         "turno":turno,
-        "horasTrabajadas":horasTrabajadas,
+        "horasTrabajadas":horasTrabajadas
         }
     trabajadores.append(trabajador)
     op=input("deseas continuar S/N: ").lower()
