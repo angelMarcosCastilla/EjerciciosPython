@@ -10,7 +10,7 @@ def calcularSalarioBruto(tarifaOrdinaria,horasTrabajadas):
     return horasTrabajadas * tarifaOrdinaria
 
 def obtenerDescuento(salarioBruto,turno):
-    if turno=="n:
+    if turno=="n":
         if salarioBruto>=2000 and salarioBruto<=5000:
             return salarioBruto * 0.15
         if salarioBruto>=8000 and salarioBruto<=10000:
