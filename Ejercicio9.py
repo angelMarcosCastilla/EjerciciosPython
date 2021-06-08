@@ -19,7 +19,7 @@ def calDescuento(precio,cantidad):
         return precio * 0.102  
     
 def calTotal(precio,descuento):
-    return precio+descuento
+    return precio-descuento
 def getObsequio(cantidad,genero):
     if (genero=="pop" or genero=="rock") and cantidad > 6 :
         return "poster"        
