@@ -9,11 +9,12 @@ def obtenerTarifaOrdinaria(turno):
 def calcularSalarioBruto(tarifaOrdinaria,horasTrabajadas):
     return horasTrabajadas * tarifaOrdinaria
 
-def obtenerDescuento(salarioBruto):
-    if salarioBruto>=2000 and salarioBruto<=5000:
-         return salarioBruto * 0.15
-    if salarioBruto>=8000 and salarioBruto<=10000:
-        return salarioBruto * 0.17
+def obtenerDescuento(salarioBruto,turno):
+    if turno=="n:
+        if salarioBruto>=2000 and salarioBruto<=5000:
+            return salarioBruto * 0.15
+        if salarioBruto>=8000 and salarioBruto<=10000:
+            return salarioBruto * 0.17
     return 0
 
 def calcularSalarioNeto(salarioBruto,descuento):
@@ -41,7 +42,7 @@ while ban:
 for trabajador in trabajadores:
     tarifaOrdinaria=obtenerTarifaOrdinaria(trabajador["turno"])
     salarioBruto=calcularSalarioBruto(tarifaOrdinaria, trabajador["horasTrabajadas"])
-    descuento=obtenerDescuento(salarioBruto)
+    descuento=obtenerDescuento(salarioBruto,trabajador["turno"])
     salarioNeto=calcularSalarioNeto(salarioBruto, descuento)
     print(f"{trabajador['nombre']} su salario es:",salarioNeto)
         
